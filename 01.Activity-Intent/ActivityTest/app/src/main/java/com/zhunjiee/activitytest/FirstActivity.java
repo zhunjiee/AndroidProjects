@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class FirstActivity extends AppCompatActivity {
+public class FirstActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +28,12 @@ public class FirstActivity extends AppCompatActivity {
 //                startActivity(intent);
 
                 // 隐式Intent
-                Intent intent = new Intent("come.zhunjiee.activitytest.ACTION_START");
-                intent.addCategory("come.zhunjiee.activitytest.MY_CATEGORY");
-                startActivity(intent);
+//                Intent intent = new Intent("com.zhunjiee.activitytest.ACTION_START");
+//                intent.addCategory("com.zhunjiee.activitytest.MY_CATEGORY");
+//                startActivity(intent);
+
+//                启动活动的最佳写法
+                SecondActivity.actionStart(FirstActivity.this, "data1", "data2");
 
                 // 销毁一个活动，相当于点击了back按钮
 //                finish();

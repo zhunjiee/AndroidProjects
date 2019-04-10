@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ThirdActivity extends AppCompatActivity {
+public class ThirdActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,9 +19,13 @@ public class ThirdActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // 利用Intent打电话
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:10086"));
-                startActivity(intent);
+//                Intent intent = new Intent(Intent.ACTION_DIAL);
+//                intent.setData(Uri.parse("tel:10086"));
+//                startActivity(intent);
+
+                ActivityController.finishAll();
+                // 杀掉进程
+//                android.os.Process.killProcess(android.os.Process.myPid());
             }
         });
     }
