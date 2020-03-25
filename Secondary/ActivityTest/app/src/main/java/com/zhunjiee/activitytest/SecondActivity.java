@@ -17,13 +17,15 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
+        Log.d(TAG, "Task id is : " + getTaskId());
+
         // 获取顺传数据
 //        Intent intent = getIntent();
 //        String data = intent.getStringExtra("extra_data");
 //        Log.d(TAG, data);
 
         // 数据传值 - 逆传
-        Button button = findViewById(R.id.button_2);
+        Button button = findViewById(R.id.button_1);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,6 +33,15 @@ public class SecondActivity extends AppCompatActivity {
                 intent.putExtra("data_return", "Hello FirstActivity");
                 setResult(RESULT_OK, intent);
                 finish();
+            }
+        });
+
+        Button button2 = findViewById(R.id.button_2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
+                startActivity(intent);
             }
         });
     }

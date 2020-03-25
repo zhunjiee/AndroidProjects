@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Log.d(TAG, "Task id is : " + getTaskId());
         // Show Toast
         Button button1 = findViewById(R.id.button_toast);
         button1.setOnClickListener(new View.OnClickListener() {

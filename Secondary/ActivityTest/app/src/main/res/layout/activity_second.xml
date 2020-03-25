@@ -7,11 +7,20 @@
     tools:context=".SecondActivity">
 
     <Button
-        android:id="@+id/button_2"
+        android:id="@+id/button_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="数据传值-逆传"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/button_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到ThirdActivity"
+        app:layout_constraintTop_toBottomOf="@+id/button_1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
